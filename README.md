@@ -55,10 +55,29 @@ npm run dev
 
 9) Criação do arquivo `Procfile` que irá servir a nossa aplicação
 
-```
-web: vendor/bin/heroku-php-apache2 public/
+Essa linha indica que a pasta que a aplicação dever ser servida
+
+```web: vendor/bin/heroku-php-apache2 public/
 ```
 
+10) Precisamos criar as variáveis de ambiente no Heroku
+    - No painel da aplicação vamos para *Settings*.
+    - Para auxiliar a inclusão das variáveis necessárias, inserirmos a KEY `APP_DEBUG` como *true* e `APP_KEY` com o valor local.
+
+11) Servir o banco de dados. O Heroku limita o uso para aplicações free, no entanto atende as necessidades de teste de aplicação.
+    
+    - Aba *Resource* > *Add-ons*. Procuramos o `heroku postres`, pois é free.
+    - Copias as Credenciais do Heroku para nossa aplicação via *HEROKU CLI*
+    ```
+    heroku config:add -a <nome_da_app_heroku> DB_CONNECTION=pgsql DB_HOST=<host> DB_DATABASE=<database> DB_PORT=5432 DB_USERNAME=<user> DB_PASSWORD=<password>
+    ```
+12) Visualizar os erros é muito importante, o comando `heroku logs --tail -a <nome_da_app_heroku>`
+
+13) Rodar as migrations
+    >heroku run php artisan migrate -a laravel-heroku-dhelly
+
+14) Rodar os assets front-end
+    Habilitar em *Settings*>*buildpacks* e adicionamos o *nodejs*. Para que o heroku saiba o que fazer com nossos arquivos javascript
 
 ### Skeleton Laravel Sail
 
