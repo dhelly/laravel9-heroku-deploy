@@ -79,7 +79,15 @@ Essa linha indica que a pasta que a aplicação dever ser servida
 14) Rodar os assets front-end
     - Habilitar em *Settings*>*buildpacks* e adicionamos o *nodejs*. Para que o heroku saiba o que fazer com nossos arquivos javascript
     - Definir os comandos do script que serão executados. Usaremos o `"postinstall": "npm run build"`
-  
+
+15) Rodar os comandos no composer.json
+
+    ```,
+        "post-install-cmd": [
+            "@php artisan migrate --force",
+            "@php artisan storage:link"
+        ]
+    ```
 
 ### Skeleton Laravel Sail
 
