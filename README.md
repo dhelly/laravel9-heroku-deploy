@@ -77,7 +77,9 @@ Essa linha indica que a pasta que a aplicação dever ser servida
     >heroku run php artisan migrate -a laravel-heroku-dhelly
 
 14) Rodar os assets front-end
-    Habilitar em *Settings*>*buildpacks* e adicionamos o *nodejs*. Para que o heroku saiba o que fazer com nossos arquivos javascript
+    - Habilitar em *Settings*>*buildpacks* e adicionamos o *nodejs*. Para que o heroku saiba o que fazer com nossos arquivos javascript
+    - Definir os comandos do script que serão executados. Usaremos o `"postinstall": "npm run build"`
+  
 
 ### Skeleton Laravel Sail
 
