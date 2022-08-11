@@ -9,7 +9,7 @@
 
 ## Etapas
 
-- Skeleton Laravel Local
+### Skeleton Laravel Local
 
 ```
 composer create-project laravel/laravel laravel-heroku
@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-- heroku
+### heroku
 
 1) Criar sua conta no Heroku
 2) Instalar o Heroku CLI
@@ -46,11 +46,10 @@ npm run dev
 
 6) No Heroku, vamos definir o mode de deploy da aplicação. No nosso caso, Github. Só proceder com a conexão da conta ou escolher o repositório.
 
-7)  
+7) Selecionar o repositório do GITHUB e definir a ***branch*** que irá para o deploy. Selecione o checkbox para aguardar os teste(wait for CI...) e habilite o deploy automático.
 
 
-
-- Skeleton Laravel Sail
+### Skeleton Laravel Sail
 
 Laravel Sail
 ```
@@ -62,7 +61,7 @@ php artisan sail:install
 ```
 
 
-Configurações para utilização do startpoint `vite`
+### Configurações para utilização do startpoint `vite`
 
 
 
