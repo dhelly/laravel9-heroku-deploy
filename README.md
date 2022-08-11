@@ -88,6 +88,17 @@ Essa linha indica que a pasta que a aplicação dever ser servida
             "@php artisan storage:link"
         ]
     ```
+16) Força o HTTPS. Solução específica para o Heroku.
+    - `AppServiceProvider.php`
+
+    ```
+        public function boot()
+        {
+            if(app()->environment('production')) {
+                URL::forceScheme('https');
+            }
+        }
+    ```
 
 ### Skeleton Laravel Sail
 
