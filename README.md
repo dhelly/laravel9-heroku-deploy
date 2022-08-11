@@ -100,24 +100,9 @@ Essa linha indica que a pasta que a aplicação dever ser servida
         }
     ```
 
-### Skeleton Laravel Sail
+### Limitações
 
-Laravel Sail
-```
-curl -s "https://laravel.build/laravel-heroku" | bash
-
-./vendor/bin/sail up
-
-php artisan sail:install
-```
-
-
-### Configurações para utilização do startpoint `vite`
-
-
-
-
-
+- Não há persistência de arquivos. Sempre que é feito um deploy no Heroku é apagado todos os arquivos.
 
 ## License
 
