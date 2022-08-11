@@ -48,6 +48,17 @@ npm run dev
 
 7) Selecionar o repositório do GITHUB e definir a ***branch*** que irá para o deploy. Selecione o checkbox para aguardar os teste(wait for CI...) e habilite o deploy automático.
 
+8) Abrir a aplicação no terminal
+   > heroku open
+
+   > heroku open -a <nome_da_app_heroku>
+
+9) Criação do arquivo `Procfile` que irá servir a nossa aplicação
+
+```
+web: vendor/bin/heroku-php-apache2 public/
+```
+
 
 ### Skeleton Laravel Sail
 
